@@ -27,6 +27,13 @@
                         <label for="capacitance" class="form-label">Capacità (F):</label>
                         <input type="number" id="capacitance" class="form-control" required>
                     </div>
+                    <div class="mb-3">
+                        <label for="configuration" class="form-label">Configurazione del Condensatore:</label>
+                        <select id="configuration" class="form-select" required>
+                            <option value="serie">Serie</option>
+                            <option value="parallelo">Parallelo</option>
+                        </select>
+                    </div>
                     <button type="submit" class="btn btn-primary">Calcola Tempo di Carica</button>
                 </form>
                 <div id="result" class="mt-3"></div>
@@ -46,6 +53,13 @@
                         <label for="resistance-inductor" class="form-label">Resistenza (Ω):</label>
                         <input type="number" id="resistance-inductor" class="form-control" required>
                     </div>
+                    <div class="mb-3">
+                        <label for="inductor-configuration" class="form-label">Configurazione dell'Induttore:</label>
+                        <select id="inductor-configuration" class="form-select" required>
+                            <option value="serie">Serie</option>
+                            <option value="parallelo">Parallelo</option>
+                        </select>
+                    </div>
                     <button type="submit" class="btn btn-primary">Calcola Tempo di Carica</button>
                 </form>
                 <div id="inductor-result" class="mt-3"></div>
@@ -60,7 +74,15 @@
             let voltage = parseFloat(document.getElementById('voltage').value);
             let resistance = parseFloat(document.getElementById('resistance').value);
             let capacitance = parseFloat(document.getElementById('capacitance').value);
-            let time = resistance * capacitance; // Tempo di carica
+            let configuration = document.getElementById('configuration').value;
+            let time;
+            
+            if (configuration === "serie") {
+                time = resistance * capacitance; // Tempo di carica per condensatore in serie
+            } else {
+                time = 2 * resistance * capacitance; // Tempo di carica per condensatore in parallelo (approssimato)
+            }
+            
             document.getElementById('result').innerText = `Tempo di Carica: ${time.toFixed(2)} secondi`;
         });
 
@@ -69,7 +91,15 @@
             
             let inductance = parseFloat(document.getElementById('inductance').value);
             let resistance = parseFloat(document.getElementById('resistance-inductor').value);
-            let timeConstant = inductance / resistance; // Costante di tempo
+            let configuration = document.getElementById('inductor-configuration').value;
+            let timeConstant;
+            
+            if (configuration === "serie") {
+                timeConstant = inductance / resistance; // Costante di tempo per induttore in serie
+            } else {
+                timeConstant = 2 * inductance / resistance; // Costante di tempo per induttore in parallelo (approssimato)
+            }
+
             document.getElementById('inductor-result').innerText = `Tempo di Carica: ${timeConstant.toFixed(2)} secondi`;
         });
     </script>
