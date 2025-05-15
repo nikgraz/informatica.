@@ -1,0 +1,187 @@
+body {
+    font-family: 'Merriweather', serif; /* Cambiato il font a Merriweather */
+    background-color: #62d085; /* Azzurro freddo ma più scuro */
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    color: #f6f047; /* Blu scuro per i titoli */
+}
+
+button {
+    margin-top: 10px;
+}
+
+.btn-primary {
+    background-color: #3b7f98; /* Blu più scuro per i bottoni */
+    border-color: #3b7f98;
+}
+
+.btn-primary:hover {
+    background-color: #2d5e73; /* Blu ancora più scuro al passaggio del mouse */
+    border-color: #2d5e73;
+}
+
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombra più marcata */
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.card-body {
+    padding: 20px;
+    background-color: #e3f1f9; /* Celeste più scuro per il corpo della card */
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bolder;
+    color: #1b2b42; /* Blu scuro per il titolo */
+}
+
+input.form-control {
+    margin-bottom: 15px;
+}
+
+.d-none {
+    display: none;
+}
+
+.card {
+    transition: opacity 0.5s ease;
+}
+
+.card-body {
+    border-color: #3b7f98; /* Bordo blu più scuro */
+    box-shadow: 0 0 5px rgba(59, 127, 152, 0.5); /* Ombra blu più scura */
+}
+
+.container {
+    margin-top: 5rem;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+}
+
+.col-12 {
+    width: 100%;
+}
+
+.col-md-6 {
+    width: 50%;
+}
+
+.btn-lg {
+    width: 100%;
+}
+
+.mt-4 {
+    margin-top: 1.5rem;
+}
+
+.mt-5 {
+    margin-top: 3rem;
+}
+
+.mb-3 {
+    margin-bottom: 1rem;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #1b2b42; /* Blu scuro per le etichette */
+}
+
+#bottone3 {
+    width: 100%;
+}
+
+#cardNascosta3 {
+    width: 100%;
+}
+
+#risultatoD {
+    margin-top: 1.5rem;
+}
+
+#image {
+    width: 100%;
+}
+
+#cardNascosta5 {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+#cardNascosta5 .card-body {
+    padding: 20px;
+    background-color: #cfe6f5; /* Celeste scuro per il background della card */
+}
+
+#cardNascosta5 .card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #1b2b42; /* Blu scuro per il titolo */
+}
+
+#cardNascosta5 .form-label {
+    font-weight: bold;
+    color: #1b2b42; /* Blu scuro per l'etichetta */
+}
+
+#cardNascosta5 .btn-primary {
+    background-color: #3b7f98; /* Blu scuro per il bottone */
+    border-color: #3b7f98;
+}
+
+#cardNascosta5 .btn-primary:hover {
+    background-color: #2d5e73; /* Blu più scuro al passaggio del mouse */
+    border-color: #2d5e73;
+}
+
+#karnaughTable {
+    margin-top: 20px;
+}
+
+#risultatoKarnaugh {
+    margin-top: 20px;
+    font-size: 1.25rem;
+    color: #1b2b42; /* Blu scuro per il testo del risultato */
+}
+
+.karnaugh-cell {
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.karnaugh-cell.inactive {
+    background-color: #d1d8e3; /* Celeste spento per cella inattiva */
+}
+
+.karnaugh-cell.active {
+    background-color: #2f7c92; /* Verde bluastro scuro per cella attiva */
+    color: #ffffff;
+}
+
+.alert {
+    font-size: 1.1rem;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.alert-success {
+    background-color: #bad4e0; /* Verde acqua scuro per successo */
+    color: #1b2b42; /* Blu scuro per il testo */
+    border: 1px solid #a0bfc8;
+}
+
+.alert-success strong {
+    font-weight: bold;
+}
